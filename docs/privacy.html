@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090a07" />
+    <meta name="description" content="Privacy policy for the LanternScan mobile application." />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Privacy Policy — LanternScan</title>
+    <link rel="canonical" href="https://scanwithlantern.com/privacy" />
+
+    <!-- iOS Smart App Banner -->
+    <meta name="apple-itunes-app" content="app-id=6791716055" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LanternScan" />
+    <meta property="og:title" content="Privacy Policy — LanternScan" />
+    <meta property="og:description" content="Privacy policy for the LanternScan mobile application." />
+    <meta property="og:url" content="https://scanwithlantern.com/privacy" />
+    <meta property="og:image" content="https://scanwithlantern.com/logo.png" />
+
+    <meta name="apple-mobile-web-app-title" content="LanternScan" />
+    <link rel="icon" href="logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="LanternScan home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M24 19v-3a8 8 0 0 1 16 0v3" />
+          <path d="M19 24h26M19 48h26M22 24v24M42 24v24" />
+          <path class="flame" d="M32 29c4 5 6 8 6 12a6 6 0 0 1-12 0c0-4 2-7 6-12Z" />
+        </svg>
+        <span>LanternScan</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="./">Home</a>
+        <a aria-current="page" href="/privacy">Privacy</a>
+        <a href="/tos">Terms</a>
+      </nav>
+    </header>
+
+    <main class="legal-layout">
+      <aside>
+        <p class="eyebrow">Legal</p>
+        <h1>Privacy<br />Policy</h1>
+        <p>Effective 16 July 2026</p>
+      </aside>
+
+      <article class="legal-copy">
+        <p class="legal-intro">
+          This policy explains how the LanternScan mobile application accesses, uses, stores, and shares
+          data. LanternScan is developed by Impossible Labs Ltd. For privacy questions, contact us via
+          the <a href="https://impossiblelabs.xyz">Impossible Labs website</a>.
+        </p>
+
+        <h2>Local discovery</h2>
+        <p>
+          LanternScan listens for Bluetooth advertisements and probes devices reachable on the local
+          Wi-Fi network. The resulting signals can include device names, local IP and MAC addresses,
+          hostnames, advertised services, open ports, signal strength, manufacturer data, and
+          identification guesses. By default, these signals are processed on your device and are not
+          sent to us.
+        </p>
+        <p>
+          LanternScan does not require an account. This release contains no advertising SDK and no
+          configured third-party analytics or crash-reporting provider.
+        </p>
+
+        <h2>Data stored on the device</h2>
+        <p>
+          LanternScan stores familiar or investigate choices, corrected device labels, onboarding state,
+          and privacy preferences locally. Discovered-device sightings are held in memory for the
+          current app session. Local data remains until you clear LanternScan’s storage or uninstall the
+          app.
+        </p>
+
+        <h2>Optional online identification</h2>
+        <p>
+          Online identification is off by default. If you explicitly enable it, LanternScan may send
+          mDNS service names and, when available, hostnames and MAC addresses for devices it cannot
+          identify locally to the Fingerbank Cloud API over HTTPS. This is used only to return a
+          more precise device identification.
+        </p>
+        <p>
+          Fingerbank states that submitted device data may be retained and used to improve its
+          identification engine, is not made public, and is not associated with individual users.
+          See the <a href="https://www.fingerbank.org/privacy/">Fingerbank Privacy Agreement</a>.
+          You can disable online identification at any time in LanternScan’s Settings.
+        </p>
+
+        <h2>Permissions</h2>
+        <ul>
+          <li>
+            <strong>Bluetooth and nearby devices:</strong> discovers Bluetooth Low Energy
+            advertisements and may connect to read standard device-information fields.
+          </li>
+          <li>
+            <strong>Local Network on iOS:</strong> discovers and identifies devices reachable on the
+            current Wi-Fi network.
+          </li>
+          <li>
+            <strong>Location-related permission on Android:</strong> Android uses this permission
+            for Bluetooth scanning on older versions and access to Wi-Fi metadata. LanternScan does not
+            request or read GPS coordinates.
+          </li>
+          <li>
+            <strong>Network access:</strong> performs local discovery and, only after opt-in, the
+            Fingerbank lookup described above.
+          </li>
+        </ul>
+
+        <h2>Sharing, sale, and tracking</h2>
+        <p>
+          We do not sell personal data and do not use LanternScan data for cross-app or cross-site
+          tracking. The only off-device sharing in this release is the optional Fingerbank lookup
+          described above.
+        </p>
+
+        <h2>Retention and deletion</h2>
+        <p>
+          Local LanternScan data can be deleted by clearing the app’s storage in system settings or
+          uninstalling the app. We do not operate a LanternScan account database. Fingerbank controls
+          retention of data submitted to its service; refer to its policy for details.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+          LanternScan is a general-audience utility and is not directed to children under 13. We do not
+          knowingly collect personal information from children.
+        </p>
+
+        <h2>Changes to this policy</h2>
+        <p>
+          We may update this policy when LanternScan’s features or data practices change. We will update
+          the effective date and publish the revised policy at this same URL.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="./">LanternScan</a>
+      <p>Free and open-source software.</p>
+      <div><a href="/privacy">Privacy</a><a href="/tos">Terms</a></div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+# Generated data files — reproduced verbatim by their generator scripts.
+**/*.generated.ts
+# Local, tool-generated Claude Code settings.
+**/.claude/settings.local.json
