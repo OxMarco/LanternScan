@@ -11,7 +11,7 @@ type Props = {
 
 export default function Screen({ children, scroll = false }: Props) {
   return (
-    <SafeAreaView className="flex-1 bg-background" edges={['top', 'left', 'right']}>
+    <SafeAreaView className="flex-1 bg-background" edges={['top', 'right', 'bottom', 'left']}>
       <LanternBackdrop />
       {scroll ? (
         <ScrollView

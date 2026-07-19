@@ -2,6 +2,7 @@
   "$schema": "https://unpkg.com/knip@6/schema.json",
   "entry": [
     "App.tsx",
+    "plugins/withAndroidReleaseConfig.js",
     "src/**/__tests__/**/*.ts",
     "src/lib/apiClient.ts",
     "src/lib/offlineMutations.ts",

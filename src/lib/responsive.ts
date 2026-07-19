@@ -23,8 +23,6 @@ export function useResponsive(): Responsive {
   const { width, height } = useWindowDimensions();
   const shortest = Math.min(width, height);
   const isTablet = shortest >= TABLET_MIN_SHORTEST;
-  const scale = isTablet
-    ? Math.min(Math.max(shortest / SCALE_DIVISOR, SCALE_MIN), SCALE_MAX)
-    : 1;
+  const scale = isTablet ? Math.min(Math.max(shortest / SCALE_DIVISOR, SCALE_MIN), SCALE_MAX) : 1;
   return { scale, isTablet, s: (size: number) => Math.round(size * scale) };
 }

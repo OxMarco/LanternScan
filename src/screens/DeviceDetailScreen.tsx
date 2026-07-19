@@ -315,7 +315,7 @@ export default function DeviceDetailScreen() {
   );
 
   return (
-    <SafeAreaView className="flex-1 bg-background" edges={['top', 'left', 'right']}>
+    <SafeAreaView className="flex-1 bg-background" edges={['top', 'right', 'bottom', 'left']}>
       <LanternBackdrop />
       <ScrollView
         contentContainerClassName="px-5 pb-12 pt-4"
@@ -469,8 +469,8 @@ export default function DeviceDetailScreen() {
         <View className="mt-8 border-t border-border pt-6">
           <SectionTitle icon="shield" label="Review status" />
           <Text className="mt-3 text-sm leading-5 text-muted">
-            Keep familiar devices quiet and flag anything unusual. LanternScan never blocks devices or
-            changes your network.
+            Keep familiar devices quiet and flag anything unusual. LanternScan never blocks devices
+            or changes your network.
           </Text>
           <View className="mt-4 flex-row gap-3">
             <TrustAction

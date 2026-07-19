@@ -280,9 +280,7 @@ export default function SonarListView({
 
           {sorted.length > 0 ? (
             <View className="mt-6 border-b border-border pb-2">
-              <Text
-                className="font-semibold text-text"
-                style={[displayType, { fontSize: s(16) }]}>
+              <Text className="font-semibold text-text" style={[displayType, { fontSize: s(16) }]}>
                 On your network
               </Text>
               {/* "Two kinds of near": network reachability says nothing about

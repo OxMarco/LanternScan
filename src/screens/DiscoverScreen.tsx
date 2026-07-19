@@ -132,7 +132,7 @@ export default function DiscoverScreen() {
   );
 
   return (
-    <SafeAreaView className="flex-1 bg-background" edges={['top', 'left', 'right']}>
+    <SafeAreaView className="flex-1 bg-background" edges={['top', 'right', 'bottom', 'left']}>
       <LanternBackdrop />
       {mode === 'lan' && !isDemoMode ? <WifiRequiredBanner /> : null}
       {mode === 'lan' && enrichment.error ? (

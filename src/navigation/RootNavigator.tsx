@@ -10,7 +10,6 @@ import { ActivityIndicator, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import ErrorBoundary from '@/components/ErrorBoundary';
-import { isDemoMode } from '@/lib/demoMode';
 import { isOnboardingComplete } from '@/lib/onboarding';
 import { analytics } from '@/observability/observability';
 import { useAppTheme } from '@/providers/ThemeProvider';
@@ -45,12 +44,6 @@ export default function RootNavigator() {
   const currentRouteName = useRef<string | undefined>(undefined);
 
   useEffect(() => {
-    // Demo builds jump straight to the populated Discover screen — onboarding
-    // asks for permissions the seeded scene never needs.
-    if (isDemoMode) {
-      setInitialRoute('Main');
-      return;
-    }
     let cancelled = false;
     isOnboardingComplete()
       .then((complete) => {

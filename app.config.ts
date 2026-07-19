@@ -121,7 +121,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       'android.permission.ACCESS_NETWORK_STATE',
       'android.permission.ACCESS_WIFI_STATE',
       'android.permission.CHANGE_WIFI_MULTICAST_STATE',
-      'android.permission.ACCESS_FINE_LOCATION',
     ],
     blockedPermissions: [
       'android.permission.READ_EXTERNAL_STORAGE',
@@ -138,10 +137,16 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       'react-native-ble-plx',
       {
         isBackgroundEnabled: false,
+        // LanternScan estimates proximity, but never derives geographic
+        // location. This keeps location permission on Android 11 and below,
+        // where BLE scanning requires it, and uses Nearby devices on 12+.
+        neverForLocation: true,
         bluetoothAlwaysPermission:
           'LanternScan scans for nearby Bluetooth devices to show what is around you.',
       },
     ],
+    // Runs after the BLE plugin so it can tighten the legacy permission scope.
+    './plugins/withAndroidReleaseConfig',
   ],
   extra: {
     ...config.extra,

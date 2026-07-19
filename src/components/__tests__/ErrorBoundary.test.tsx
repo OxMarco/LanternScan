@@ -30,7 +30,7 @@ describe('ErrorBoundary', () => {
       );
     });
 
-    expect(renderedText(tree)).toContain('Lantern hit a snag');
+    expect(renderedText(tree)).toContain('LanternScan hit a snag');
     expect(renderedText(tree)).toContain('Your scan data is safe');
 
     shouldThrow = false;
